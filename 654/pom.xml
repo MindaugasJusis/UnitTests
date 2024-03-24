@@ -17,11 +17,14 @@
     </properties>
 
     <dependencies>
-       <dependency>
-  		<groupId>1234</groupId>
-  		<artifactId>1234</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
+       
+        <!-- Selenium Java dependency -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.1.1</version> <!-- Update to the latest stable Selenium version -->
+        </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
