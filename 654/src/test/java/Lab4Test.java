@@ -107,10 +107,10 @@ public class Lab4Test {
 
 	}
 
-	@Test
-	// @ParameterizedTest
-	// @ValueSource(strings = {"src/data1.txt", "src/data2.txt"})
-	public void test1(/* String fileName */) {
+	// @Test
+	@ParameterizedTest
+	@ValueSource(strings = { "src/data1.txt", "src/data2.txt" })
+	public void test1(String fileName) {
 
 		driver.findElement(By.xpath("//a[@href='/login']")).click();
 
@@ -121,7 +121,7 @@ public class Lab4Test {
 
 		driver.findElement(By.xpath("//a[@href=\"/digital-downloads\"]")).click();
 
-		try (BufferedReader br = new BufferedReader(new FileReader(/* fileName */test1FileName))) {
+		try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
 			String line;
 			while ((line = br.readLine()) != null) {
 
