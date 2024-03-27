@@ -86,18 +86,18 @@ public class Lab4Test {
 
 		driver.findElement(By.xpath("//input[@id=\"gender-male\"]")).click();
 		driver.findElement(By.xpath("//input[@id=\"FirstName\" and @class=\"text-box single-line\"]"))
-				.sendKeys(lab4.firstname);
+				.sendKeys(Lab4Test.firstname);
 		driver.findElement(By.xpath("//input[@id=\"LastName\" and @class=\"text-box single-line\"]"))
-				.sendKeys(lab4.lastname);
+				.sendKeys(Lab4Test.lastname);
 
 		String email = String.valueOf(UUID.randomUUID());
 		email += "@example.com";
-		lab4.email = email;
+		Lab4Test.email = email;
 
 		driver.findElement(By.xpath("//input[@id=\"Email\"]")).sendKeys(email);
 
-		driver.findElement(By.xpath("//input[@id=\"Password\"]")).sendKeys(lab4.password);
-		driver.findElement(By.xpath("//input[@id=\"ConfirmPassword\"]")).sendKeys(lab4.password);
+		driver.findElement(By.xpath("//input[@id=\"Password\"]")).sendKeys(Lab4Test.password);
+		driver.findElement(By.xpath("//input[@id=\"ConfirmPassword\"]")).sendKeys(Lab4Test.password);
 
 		driver.findElement(By.xpath("//input[@id=\"register-button\"]")).click();
 
